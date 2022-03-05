@@ -10,14 +10,8 @@ Plese register your app with firebase and download the services.json fill into t
   <h6>After cloning the project run</h6>
   <code>flutter geet pub</code>
   <h6>Every dependency are up to data as of 05/03/2022</h6>
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project is a starting point for a Flutter application with firebase authentication and read ,write data in  firebase.
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
