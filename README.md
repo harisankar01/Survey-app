@@ -1,7 +1,15 @@
 # quiz_app
 
-A new Flutter project.
-
+<h2>A new Flutter project.</h2>
+<blockquotes>
+Plese register your app with firebase and download the services.json fill into the app folder
+  Also enable email authentication and firestore in firebase 
+</blockquotes>
+<p>Follow any youtube video for the firebase setup
+<p>
+  <h6>After cloning the project run</h6>
+  <code>flutter geet pub</code>
+  <h6>Every dependency are up to data as of 05/03/2022</h6>
 ## Getting Started
 
 This project is a starting point for a Flutter application.
