@@ -1,7 +1,4 @@
-# quiz_app
-
-<h2>A new Flutter project.</h2>
-<h2> -->A survey app</h2>
+<h2>A new Flutter project -->A survey app</h2>
 <blockquotes>
 Plese register your app with firebase and download the services.json fill into the app folder
   Also enable email authentication and firestore in firebase 
