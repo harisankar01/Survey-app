@@ -5,11 +5,18 @@ import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/controller/db.dart';
 import 'package:quiz_app/screens/admin.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
-
-class WelcomeScreen extends StatelessWidget {
+import 'package:country_list_pick/country_list_pick.dart';
+class WelcomeScreen extends StatefulWidget {
   WelcomeScreen({Key? key}) : super(key: key);
+  @override
+  _WelcomeScreen createState() => _WelcomeScreen();
+}
+
+class _WelcomeScreen extends State<WelcomeScreen> {
   final nameController = TextEditingController();
   final rollController = TextEditingController();
+  late String gender="";
+  String country="India";
   Db data=Db();
   @override
   Widget build(BuildContext context) {
@@ -54,15 +61,45 @@ class WelcomeScreen extends StatelessWidget {
                         color: Colors.white
                     ),
                   ),
-                  const SizedBox(
-                    height: 10,
+                  Row(
+                    children: [
+                      Radio(value: "Male", groupValue: gender, onChanged: (value){
+                        setState(() {
+                          gender = value.toString();
+                        });
+                      }),
+                      const Text(
+                        'Male',
+                        style: TextStyle(fontSize: 16.0,color: Colors.white),
+                      ),
+                      Radio(value: "Female", groupValue: gender, onChanged: (value){
+                        setState(() {
+                          gender = value.toString();
+                        });
+                      }),
+                      const Text(
+                        'Female',
+                        style: TextStyle(fontSize: 16.0,color: Colors.white),
+
+                      ),
+                      Radio(value: "Others", groupValue: gender, onChanged: (value){
+                        setState(() {
+                          gender = value.toString();
+                        });
+                        print(gender);
+                      }),
+                      const Text(
+                        'Others',
+                        style: TextStyle(fontSize: 16.0,color: Colors.white),
+                      ),
+                    ],
                   ),
                   TextField(
                     controller: rollController,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color(0xFF1C2341),
-                      hintText: "Roll-no",
+                      hintText: "Age",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
@@ -72,10 +109,43 @@ class WelcomeScreen extends StatelessWidget {
                         color: Colors.white
                     ),
                   ),
-                  const Spacer(), // 1/6
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                      padding:EdgeInsets.all(20),
+                      height:100,
+                      alignment: Alignment.center,
+                      child: Card(
+                        child:Padding(
+                          padding: EdgeInsets.all(5),
+                            child:SizedBox(
+                              width:double.infinity,
+                              child:CountryListPick(
+                                appBar: AppBar(
+                                backgroundColor: Colors.amber,
+                                  title: Text('Pick your country'),
+                                ),
+                    theme: CountryTheme(
+                      isShowFlag: true,
+                      isShowTitle: true,
+                      isShowCode: true,
+                      isDownIcon: true,
+                      showEnglishName: false,
+                      labelColor: Colors.blueAccent,
+                    ),
+                    initialSelection: '+91',
+                    onChanged: (CountryCode? code) {
+                      setState(() {
+                        country =(code?.name).toString();
+                      });
+                    },
+                  ))))),
+                  Spacer(),
+                  // 1/6
                   InkWell(
                     onTap: () => {
-                      data.init(nameController.text,rollController.text),
+                      data.init(nameController.text,rollController.text,country,gender),
                       Get.to(()=> QuizScreen())},
                     child: Container(
                       width: double.infinity,

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,13 +21,15 @@ class ScoreScreen extends StatelessWidget {
     // Call the user's CollectionReference to add a new user
     return users
         .add({
-      'name': data.namee,
-      'Roll-no': data.rolle,
+      'Name': data.namee,
+      'Age': data.rolle,
+      'Country':data.coun,
+      'Gender':data.gen,
       'Concentration Disruption Score': cScore,
       'Somatic Trait Anxiety Score':sscore,
-      'Worry Score':worryscore// 42
+      'Worry Score':worryscore
     })
-        .then((value) => print("User Added"))
+        .then((value) => exit(0))
         .catchError((error) => print("Failed to add user: $error"));
   }
 

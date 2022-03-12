@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
-
   @override
   _Dashboard createState() => _Dashboard();
 }
@@ -30,7 +29,7 @@ class _Dashboard extends State<Dashboard> {
               Map<String, dynamic> data = document.data()! as Map<String, dynamic>;
               return Card(
                   child:ListTile(
-                title: Text("Name= ${data['name']} Roll= ${data['Roll-no']}"),
+                title: Text("Name= ${data['Name']} Age= ${data['Age']}  Country=${data['Country']} Gender=${data['Gender']}"),
                 subtitle: Text("Concentration Dstruption Score= ${data['Concentration Disruption Score']} Somatic Trait Anxiety Score= ${data['Somatic Trait Anxiety Score']} Worry Score=${data['Worry Score']}"),
               )
               );
