@@ -41,7 +41,9 @@ dependencies:
   fluttertoast: ^8.0.9
   country_picker: ^2.0.12
   country_list_pick: ^1.0.1+5
-
+  syncfusion_flutter_pdf: ^20.1.57-beta
+  path_provider: ^2.0.10
+  open_file: ^3.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
