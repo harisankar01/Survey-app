@@ -1,15 +1,16 @@
-<h2>A new Flutter project -->A survey app</h2>
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)  ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
+# Survey mobile Application
 
-## Scope of APP
+## Features of the application
 
-  + Take easy surveys with this survey mobile app.
-  + Stores results in firebase.
-  + Has Admin page where admin can view the results of survey.
-  + Providing a downloadable pdf file for results.
-  + Amazing UI
+  - Take easy surveys with this survey mobile app.
+  - Stores result in firebase.
+  - Has an Admin page where the admin can view the results of the survey.
+  - Providing a downloadable pdf file for results.
+  - Amazing UI
 
 
-> Note: Please register your app with firebase and download the services.json fill into the app folder
+> Note: Please register your app with firebase and download the services.json fill it into the app folder
 > >  Also enable email authentication and fire store in firebase 
 
 You can Follow any youtube video for the firebase setup.
